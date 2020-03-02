@@ -5,7 +5,7 @@ import pymongo
 client = pymongo.MongoClient('mongodb://127.0.0.1:27017/')
 mydb = client['Journal']
 Inventory = mydb.Inventory
-"""Inventory.insert_many([
+Inventory.insert_many([
     {"item": "canvas",
      "qty": 100,
      "size": {"h": 28, "w": 35.5, "uom": "cm"},
@@ -45,13 +45,13 @@ Inventory = mydb.Inventory
     {"item": "sketch pad",
      "qty": 95,
      "size": {"h": 22.85, "w": 30.5, "uom": "cm"},
-     "status": "A"}])   """
+     "status": "A"}])   
 
 #Updating one document
-"""Inventory.update_one(
+Inventory.update_one(
     {'item':'sketch pad'},
     {'$set':{'size.h':22.0,'status':'B'}}
- )  """
+ )  
 
 #Updating many documents
 Inventory.update_many(
